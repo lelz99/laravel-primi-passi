@@ -14,5 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+
+    $greeting = 'Hello World';
+
+
+    return view('home', compact('greeting'));
 });
+
+Route::get('/class', function () {
+
+    $greeting = 'Ciao Classe 116';
+
+    return view('class/class', compact('greeting'));
+});
+
